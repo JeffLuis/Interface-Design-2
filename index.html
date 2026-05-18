@@ -1,298 +1,274 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Margaret Hamilton — A Programadora que foi à Lua</title>
-    <meta
-      name="description"
-      content="Site educativo sobre Margaret Hamilton, a cientista da computação que liderou o desenvolvimento do software de navegação das missões Apollo da NASA."
-    />
-    <link rel="stylesheet" href="css/modern-normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
 
-    <!-- ===== CABEÇALHO ===== -->
-    <header id="topo">
-      <div class="header-logo">      
-        <div>
-          <h1>Margaret <span>Hamilton</span></h1>
-          <p class="subtitulo">A Programadora que levou o homem à Lua</p>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Margaret Hamilton — A Programadora que foi à Lua</title>
+  <meta name="description"
+    content="Site educativo sobre Margaret Hamilton, a cientista da computação que liderou o desenvolvimento do software de navegação das missões Apollo da NASA."/>
+  <link rel="stylesheet" href="css/modern-normalize.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+
+  <!-- ===== CABEÇALHO ===== -->
+  <header id="topo">
+    <div class="header-logo">
+      <div>
+        <h1>Margaret <span>Hamilton</span></h1>
+        <p class="subtitulo">A Programadora que levou o homem à Lua</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== NAVEGAÇÃO ===== -->
+  <nav aria-label="Menu principal">
+    <ul>
+      <li><a href="#biografia">Biografia</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#missao">Missão Apollo</a></li>
+      <li><a href="#legado">Legado</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <main>
+
+    <!-- === SEÇÃO 1: BIOGRAFIA === -->
+    <section id="biografia" aria-labelledby="titulo-biografia">
+      <h2 id="titulo-biografia">Quem foi Margaret Hamilton?</h2>
+
+      <div class="bio-intro">
+        <div class="bio-intro-texto">
+          <p>
+            <strong>Margaret Heafield Hamilton</strong> nasceu em 17 de agosto
+            de 1936, em Paoli, Indiana (EUA). Matemática e cientista da
+            computação, ela é amplamente reconhecida como uma das pioneiras do
+            desenvolvimento de software — tendo sido ela própria a responsável
+            por cunhar o termo <em>"engenharia de software"</em> para
+            descrever sua área de trabalho em uma época em que programar
+            computadores ainda não era considerado uma disciplina científica
+            séria.
+          </p>
+          <p>
+            Formada em matemática pelo Earlham College em 1958, Hamilton
+            planejava inicialmente obter um doutorado na Universidade de
+            Michigan. No entanto, seu destino tomou outro rumo quando ela
+            passou a trabalhar no MIT (Instituto de Tecnologia de
+            Massachusetts), onde acabou se envolvendo com alguns dos projetos
+            computacionais mais ambiciosos da história.
+          </p>
+        </div>
+
+        <div class="bio-foto-wrapper">
+          <img class="bio-foto" src="img/Margaret_Hamilton_-_restoration.jpg"
+            alt="Fotografia em preto e branco de Margaret Hamilton no MIT, anos 1960"/>
+          <p class="bio-foto-legenda">
+            Margaret Hamilton no MIT, c.&nbsp;1969.<br/>
+            Fonte: NASA / Domínio público
+          </p>
         </div>
       </div>
-    </header>
 
-    <!-- ===== NAVEGAÇÃO ===== -->
-    <nav aria-label="Menu principal">
-      <ul>
-        <li><a href="#biografia">Biografia</a></li>
-        <li><a href="#galeria">Galeria</a></li>
-        <li><a href="#missao">Missão Apollo</a></li>
-        <li><a href="#legado">Legado</a></li>
+      <h3>Do MIT à NASA</h3>
+      <p>
+        No início dos anos 1960, Hamilton começou a trabalhar no MIT
+        Instrumentation Laboratory, onde contribuiu para o desenvolvimento do
+        software de previsão meteorológica do projeto SAGE (Semi-Automatic
+        Ground Environment) — um dos primeiros sistemas de defesa aérea
+        computadorizados dos EUA. Essa experiência foi fundamental para o que
+        viria a seguir.
+      </p>
+      <p>
+        Em 1965, a NASA selecionou o MIT para desenvolver o software de
+        navegação, orientação e controle (GNC) das missões Apollo e Gemini.
+        Hamilton tornou-se a diretora do projeto, liderando uma equipe
+        responsável por criar o código que guiaria os astronautas até a Lua e
+        os traria de volta com segurança.
+      </p>
+
+      <div class="destaque-box">
+        "Quando comecei, não havia nenhuma palavra para descrever o que eu
+        fazia. Então criei uma."
+        <cite>— Margaret Hamilton, sobre ter inventado o termo "engenharia de software"</cite>
+      </div>
+
+      <h3>O Software que foi à Lua</h3>
+      <p>
+        O software desenvolvido pela equipe de Hamilton precisava funcionar em
+        um computador com capacidade ínfima pelo padrão atual — o
+        <em>Apollo Guidance Computer</em> (AGC) tinha apenas 4 KB de memória
+        RAM e 72 KB de armazenamento em memória de núcleo. Escrever código
+        eficiente e confiável para um equipamento tão limitado, em uma missão
+        onde qualquer erro poderia custar vidas, foi um desafio monumental.
+      </p>
+      <p>
+        Hamilton introduziu conceitos revolucionários no processo: priorização
+        de tarefas em tempo real, detecção e recuperação de erros em voo, e
+        tratamento de exceções de software — abordagens que se tornaram
+        pilares da engenharia de software moderna.
+      </p>
+
+      <figure class="imagem-bloco">
+        <img src="img/Margaret_Hamilton_in_action.jpg"
+          alt="Margaret Hamilton em seu laboratório no MIT, rodeada de equipamentos da época"/>
+        <figcaption>
+          Hamilton em seu laboratório no MIT durante o desenvolvimento do
+          software Apollo. Fonte: NASA / Domínio público.
+        </figcaption>
+      </figure>
+
+      <h3>A Crise da Apollo 11 — e o Software que Salvou a Missão</h3>
+      <p>
+        Em 20 de julho de 1969, durante os minutos finais da descida do módulo
+        lunar da Apollo 11, os astronautas Neil Armstrong e Buzz Aldrin
+        depararam-se com uma série de alarmes inesperados: o código
+        <strong>1202</strong>. O computador de bordo estava sendo
+        sobrecarregado por tarefas desnecessárias provenientes de um radar que
+        havia ficado ligado por engano.
+      </p>
+      <p>
+        Graças ao mecanismo de priorização de tarefas que Hamilton havia
+        projetado, o AGC reconheceu que estava sobrecarregado e descartou
+        automaticamente as tarefas menos críticas, mantendo as funções
+        essenciais de navegação em funcionamento. A pousar continuou. Doze
+        minutos depois, o módulo Eagle tocou o solo lunar.
+      </p>
+      <p>
+        Sem esse mecanismo, a missão provavelmente teria sido abortada. A
+        previsão de Hamilton de que erros imprevistos aconteceriam — e sua
+        insistência em construir o software para lidar com eles — salvou a
+        maior façanha tecnológica do século XX.
+      </p>
+
+      <h3>Linha do Tempo</h3>
+      <ul class="linha-tempo" aria-label="Linha do tempo de Margaret Hamilton">
+        <li><strong>1936</strong> Nasce em Paoli, Indiana, EUA.</li>
+        <li><strong>1958</strong> Formada em matemática pelo Earlham College.</li>
+        <li><strong>1961</strong> Começa a trabalhar no MIT (projeto SAGE).</li>
+        <li><strong>1965</strong> Assume a liderança do software de navegação Apollo/Gemini.</li>
+        <li><strong>1969</strong> Apollo 11 pousa na Lua; seu software previne um aborto de missão.</li>
+        <li><strong>1976</strong> Co-funda a empresa Higher Order Software (HOS).</li>
+        <li><strong>1986</strong> Funda a Hamilton Technologies, Inc.</li>
+        <li><strong>2003</strong> Recebe a NASA Exceptional Space Act Award, com o maior prêmio em dinheiro da história
+          da NASA.</li>
+        <li><strong>2016</strong> Recebe a Medalha Presidencial da Liberdade, a mais alta honraria civil dos EUA.</li>
       </ul>
-    </nav>
 
-    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
-    <main>
+      <a class="topo-link" href="#topo">&#8593; Voltar ao topo</a>
+    </section>
 
-      <!-- === SEÇÃO 1: BIOGRAFIA === -->
-      <section id="biografia" aria-labelledby="titulo-biografia">
-        <h2 id="titulo-biografia">Quem foi Margaret Hamilton?</h2>
+    <hr class="divisor"/>
 
-        <div class="bio-intro">
-          <div class="bio-intro-texto">
-            <p>
-              <strong>Margaret Heafield Hamilton</strong> nasceu em 17 de agosto
-              de 1936, em Paoli, Indiana (EUA). Matemática e cientista da
-              computação, ela é amplamente reconhecida como uma das pioneiras do
-              desenvolvimento de software — tendo sido ela própria a responsável
-              por cunhar o termo <em>"engenharia de software"</em> para
-              descrever sua área de trabalho em uma época em que programar
-              computadores ainda não era considerado uma disciplina científica
-              séria.
-            </p>
-            <p>
-              Formada em matemática pelo Earlham College em 1958, Hamilton
-              planejava inicialmente obter um doutorado na Universidade de
-              Michigan. No entanto, seu destino tomou outro rumo quando ela
-              passou a trabalhar no MIT (Instituto de Tecnologia de
-              Massachusetts), onde acabou se envolvendo com alguns dos projetos
-              computacionais mais ambiciosos da história.
-            </p>
-          </div>
-
-          <div class="bio-foto-wrapper">            
-            <img
-              class="bio-foto"
-              src="img/Margaret_Hamilton_-_restoration.jpg"
-              alt="Fotografia em preto e branco de Margaret Hamilton no MIT, anos 1960"
-            />
-            <p class="bio-foto-legenda">
-              Margaret Hamilton no MIT, c.&nbsp;1969.<br />
-              Fonte: NASA / Domínio público
-            </p>
-          </div>
-        </div>
-
-        <h3>Do MIT à NASA</h3>
-        <p>
-          No início dos anos 1960, Hamilton começou a trabalhar no MIT
-          Instrumentation Laboratory, onde contribuiu para o desenvolvimento do
-          software de previsão meteorológica do projeto SAGE (Semi-Automatic
-          Ground Environment) — um dos primeiros sistemas de defesa aérea
-          computadorizados dos EUA. Essa experiência foi fundamental para o que
-          viria a seguir.
-        </p>
-        <p>
-          Em 1965, a NASA selecionou o MIT para desenvolver o software de
-          navegação, orientação e controle (GNC) das missões Apollo e Gemini.
-          Hamilton tornou-se a diretora do projeto, liderando uma equipe
-          responsável por criar o código que guiaria os astronautas até a Lua e
-          os traria de volta com segurança.
-        </p>
-
-        <div class="destaque-box">
-          "Quando comecei, não havia nenhuma palavra para descrever o que eu
-          fazia. Então criei uma."
-          <cite>— Margaret Hamilton, sobre ter inventado o termo "engenharia de software"</cite>
-        </div>
-
-        <h3>O Software que foi à Lua</h3>
-        <p>
-          O software desenvolvido pela equipe de Hamilton precisava funcionar em
-          um computador com capacidade ínfima pelo padrão atual — o
-          <em>Apollo Guidance Computer</em> (AGC) tinha apenas 4 KB de memória
-          RAM e 72 KB de armazenamento em memória de núcleo. Escrever código
-          eficiente e confiável para um equipamento tão limitado, em uma missão
-          onde qualquer erro poderia custar vidas, foi um desafio monumental.
-        </p>
-        <p>
-          Hamilton introduziu conceitos revolucionários no processo: priorização
-          de tarefas em tempo real, detecção e recuperação de erros em voo, e
-          tratamento de exceções de software — abordagens que se tornaram
-          pilares da engenharia de software moderna.
-        </p>
-        
-        <figure class="imagem-bloco">
-          <img
-            src="img/Margaret_Hamilton_in_action.jpg"
-            alt="Margaret Hamilton em seu laboratório no MIT, rodeada de equipamentos da época"
-          />
-          <figcaption>
-            Hamilton em seu laboratório no MIT durante o desenvolvimento do
-            software Apollo. Fonte: NASA / Domínio público.
-          </figcaption>
-        </figure>
-
-        <h3>A Crise da Apollo 11 — e o Software que Salvou a Missão</h3>
-        <p>
-          Em 20 de julho de 1969, durante os minutos finais da descida do módulo
-          lunar da Apollo 11, os astronautas Neil Armstrong e Buzz Aldrin
-          depararam-se com uma série de alarmes inesperados: o código
-          <strong>1202</strong>. O computador de bordo estava sendo
-          sobrecarregado por tarefas desnecessárias provenientes de um radar que
-          havia ficado ligado por engano.
-        </p>
-        <p>
-          Graças ao mecanismo de priorização de tarefas que Hamilton havia
-          projetado, o AGC reconheceu que estava sobrecarregado e descartou
-          automaticamente as tarefas menos críticas, mantendo as funções
-          essenciais de navegação em funcionamento. A pousar continuou. Doze
-          minutos depois, o módulo Eagle tocou o solo lunar.
-        </p>
-        <p>
-          Sem esse mecanismo, a missão provavelmente teria sido abortada. A
-          previsão de Hamilton de que erros imprevistos aconteceriam — e sua
-          insistência em construir o software para lidar com eles — salvou a
-          maior façanha tecnológica do século XX.
-        </p>
-
-        <h3>Linha do Tempo</h3>
-        <ul class="linha-tempo" aria-label="Linha do tempo de Margaret Hamilton">
-          <li><strong>1936</strong> Nasce em Paoli, Indiana, EUA.</li>
-          <li><strong>1958</strong> Formada em matemática pelo Earlham College.</li>
-          <li><strong>1961</strong> Começa a trabalhar no MIT (projeto SAGE).</li>
-          <li><strong>1965</strong> Assume a liderança do software de navegação Apollo/Gemini.</li>
-          <li><strong>1969</strong> Apollo 11 pousa na Lua; seu software previne um aborto de missão.</li>
-          <li><strong>1976</strong> Co-funda a empresa Higher Order Software (HOS).</li>
-          <li><strong>1986</strong> Funda a Hamilton Technologies, Inc.</li>
-          <li><strong>2003</strong> Recebe a NASA Exceptional Space Act Award, com o maior prêmio em dinheiro da história da NASA.</li>
-          <li><strong>2016</strong> Recebe a Medalha Presidencial da Liberdade, a mais alta honraria civil dos EUA.</li>
-        </ul>
-
-        <a class="topo-link" href="#topo">&#8593; Voltar ao topo</a>
-      </section>
-
-      <hr class="divisor" />
-
-      <!-- === SEÇÃO 2: GALERIA === -->
-      <section id="galeria" aria-labelledby="titulo-galeria">
-        <h2 id="titulo-galeria">Galeria</h2>
-        <p>
-          Registros históricos do programa espacial Apollo e de Margaret
-          Hamilton, cujo trabalho foi essencial para uma das maiores conquistas
-          da humanidade.
-        </p>
-
-        <div class="galeria-grid">
-
-          <div class="galeria-item">            
-            <img
-              src="img/Margaret_Hamilton_-_restoration.jpg"
-              alt="Margaret Hamilton ao lado de uma enorme pilha de listagens de código-fonte impresso do software Apollo"
-              loading="lazy"
-            />
-            <p class="galeria-legenda">
-              Hamilton ao lado dos códigos-fonte impressos do software Apollo —
-              uma pilha que lhe chegava à cintura. NASA / MIT, c.&nbsp;1969.
-              Domínio público.
-            </p>
-          </div>
-
-          <div class="galeria-item">           
-            <img
-              src="img/Apollo_11_Launch_-_GPN-2000-000630.jpg"
-              alt="Astronauta Buzz Aldrin caminhando na superfície lunar durante a Apollo 11, com o módulo de descida ao fundo"
-              loading="lazy"
-            />
-            <p class="galeria-legenda">
-              Buzz Aldrin na superfície da Lua, Apollo 11, julho de 1969. O
-              pouso foi possível graças ao software de Hamilton. Foto: NASA /
-              Domínio público.
-            </p>
-          </div>
-
-          <div class="galeria-item">            
-            <img
-              src="img/Apolo_Guidence_Computer_CHM.agr.jpg"
-              alt="Apollo Guidance Computer exposto no Computer History Museum, mostrando a interface física do computador usado nas missões Apollo"
-              loading="lazy"
-            />
-            <p class="galeria-legenda">
-              Apollo Guidance Computer (AGC), o computador programado pela
-              equipe de Hamilton. Hoje exposto no Computer History Museum. Foto:
-              Wikimedia Commons / CC BY-SA 2.0.
-            </p>
-          </div>
-
-          <div class="galeria-item">            
-            <img
-              src="img/Hamilton Final.jpg"
-              alt="Presidente Barack Obama entregando a Medalha Presidencial da Liberdade a Margaret Hamilton na Casa Branca em 2016"
-              loading="lazy"
-            />
-            <p class="galeria-legenda">
-              O presidente Barack Obama confere a Hamilton a Medalha Presidencial
-              da Liberdade, a mais alta honraria civil dos EUA, em novembro de
-              2016. Foto: Pete Souza / Casa Branca / Domínio público.
-            </p>
-          </div>
-
-        </div>
-
-        <!-- Referências -->
-        <div class="referencias">
-          <h3>Referências</h3>
-          <ol>
-            <li>
-              NASA. <em>Margaret Hamilton, Apollo Software Engineer, Awarded Presidential Medal of Freedom</em>.
-              Disponível em:
-              <a
-                href="https://www.nasa.gov/feature/margaret-hamilton-apollo-software-engineer-awarded-presidential-medal-of-freedom"
-                target="_blank"
-                rel="noopener noreferrer"
-              >nasa.gov</a>. Acesso em: maio 2025.
-            </li>
-            <li>
-              MIT News. <em>Margaret Hamilton's Apollo Code</em>.
-              Disponível em:
-              <a
-                href="https://news.mit.edu/2016/hamilton-software-apollo-1017"
-                target="_blank"
-                rel="noopener noreferrer"
-              >news.mit.edu</a>. Acesso em: maio 2025.
-            </li>
-            <li>
-              Wikimedia Commons. Fotografias de domínio público relacionadas às missões Apollo e a Margaret Hamilton.
-              Disponível em:
-              <a
-                href="https://commons.wikimedia.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >commons.wikimedia.org</a>.
-            </li>
-            <li>
-              Computer History Museum. <em>Margaret Hamilton</em>.
-              Disponível em:
-              <a
-                href="https://www.computerhistory.org/fellowawards/hall/margaret-hamilton/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >computerhistory.org</a>. Acesso em: maio 2025.
-            </li>
-          </ol>
-        </div>
-
-        <a class="topo-link" href="#topo">&#8593; Voltar ao topo</a>
-      </section>
-
-    </main>
-
-    <!-- ===== RODAPÉ ===== -->
-    <footer>
+    <!-- === SEÇÃO 2: GALERIA === -->
+    <section id="galeria" aria-labelledby="titulo-galeria">
+      <h2 id="titulo-galeria">Galeria</h2>
       <p>
-        Site desenvolvido por: Jefferson Luis. Como trabalho educativo para a disciplina de
-        <strong>Desenvolvimento Web</strong>.
+        Registros históricos do programa espacial Apollo e de Margaret
+        Hamilton, cujo trabalho foi essencial para uma das maiores conquistas
+        da humanidade.
       </p>
-      <p>
-        Conteúdo de domínio público ou licença aberta. Consulte as referências
-        na seção Galeria.
-      </p>
-      <p class="footer-disciplina">
-        Trabalho 2 — CSS responsivo sem frameworks externos &bull; 2025
-      </p>
-    </footer>
 
-  </body>
+      <div class="galeria-grid">
+
+        <div class="galeria-item">
+          <img src="img/Margaret_Hamilton_-_restoration.jpg"
+            alt="Margaret Hamilton ao lado de uma enorme pilha de listagens de código-fonte impresso do software Apollo"
+            loading="lazy"/>
+          <p class="galeria-legenda">
+            Hamilton ao lado dos códigos-fonte impressos do software Apollo —
+            uma pilha que lhe chegava à cintura. NASA / MIT, c.&nbsp;1969.
+            Domínio público.
+          </p>
+        </div>
+
+        <div class="galeria-item">
+          <img src="img/Apollo_11_Launch_-_GPN-2000-000630.jpg"
+            alt="Astronauta Buzz Aldrin caminhando na superfície lunar durante a Apollo 11, com o módulo de descida ao fundo"
+            loading="lazy"/>
+          <p class="galeria-legenda">
+            Buzz Aldrin na superfície da Lua, Apollo 11, julho de 1969. O
+            pouso foi possível graças ao software de Hamilton. Foto: NASA /
+            Domínio público.
+          </p>
+        </div>
+
+        <div class="galeria-item">
+          <img src="img/Apolo_Guidence_Computer_CHM.agr.jpg"
+            alt="Apollo Guidance Computer exposto no Computer History Museum, mostrando a interface física do computador usado nas missões Apollo"
+            loading="lazy"/>
+          <p class="galeria-legenda">
+            Apollo Guidance Computer (AGC), o computador programado pela
+            equipe de Hamilton. Hoje exposto no Computer History Museum. Foto:
+            Wikimedia Commons / CC BY-SA 2.0.
+          </p>
+        </div>
+
+        <div class="galeria-item">
+          <img src="img/Hamilton_Final.jpg"
+            alt="Presidente Barack Obama entregando a Medalha Presidencial da Liberdade a Margaret Hamilton na Casa Branca em 2016"
+            loading="lazy"/>
+          <p class="galeria-legenda">
+            O presidente Barack Obama confere a Hamilton a Medalha Presidencial
+            da Liberdade, a mais alta honraria civil dos EUA, em novembro de
+            2016. Foto: Pete Souza / Casa Branca / Domínio público.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Referências -->
+      <div class="referencias">
+        <h3>Referências</h3>
+        <ol>
+          <li>
+            NASA. <em>Margaret Hamilton, Apollo Software Engineer, Awarded Presidential Medal of Freedom</em>.
+            Disponível em:
+            <a href="https://www.nasa.gov/feature/margaret-hamilton-apollo-software-engineer-awarded-presidential-medal-of-freedom"
+              target="_blank" rel="noopener noreferrer">nasa.gov</a>. Acesso em: maio 2025.
+          </li>
+          <li>
+            MIT News. <em>Margaret Hamilton's Apollo Code</em>.
+            Disponível em:
+            <a href="https://news.mit.edu/2016/hamilton-software-apollo-1017" target="_blank"
+              rel="noopener noreferrer">news.mit.edu</a>. Acesso em: maio 2025.
+          </li>
+          <li>
+            Wikimedia Commons. Fotografias de domínio público relacionadas às missões Apollo e a Margaret Hamilton.
+            Disponível em:
+            <a href="https://commons.wikimedia.org" target="_blank" rel="noopener noreferrer">commons.wikimedia.org</a>.
+          </li>
+          <li>
+            Computer History Museum. <em>Margaret Hamilton</em>.
+            Disponível em:
+            <a href="https://www.computerhistory.org/fellowawards/hall/margaret-hamilton/" target="_blank"
+              rel="noopener noreferrer">computerhistory.org</a>. Acesso em: maio 2025.
+          </li>
+        </ol>
+      </div>
+
+      <a class="topo-link" href="#topo">&#8593; Voltar ao topo</a>
+    </section>
+
+  </main>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer>
+    <p>
+      Site desenvolvido por: Jefferson Luis. Como trabalho educativo para a disciplina de
+      <strong>Desenvolvimento Web</strong>.
+    </p>
+    <p>
+      Conteúdo de domínio público ou licença aberta. Consulte as referências
+      na seção Galeria.
+    </p>
+    <p class="footer-disciplina">
+      Trabalho 2 — CSS responsivo sem frameworks externos &bull; 2025
+    </p>
+  </footer>
+
+</body>
+
 </html>
