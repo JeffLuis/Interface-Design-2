@@ -1,0 +1,446 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* ---------- Variáveis ---------- */
+:root {
+  --cor-fundo: #05070f;
+  --cor-fundo-sec: #0c1024;
+  --cor-primaria: #1a2550;
+  --cor-destaque: #c9a84c;
+  --cor-destaque2: #7ec8e3;
+  --cor-texto: #e8eaf0;
+  --cor-texto-suave: #9ba3c0;
+  --cor-borda: #1e2d6b;
+  --fonte-display: 'Space Grotesk', sans-serif;
+  --fonte-corpo: 'Lora', serif;
+  --max-largura: 900px;
+  --raio: 8px;
+  --sombra: 0 4px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--cor-destaque);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  color: var(--cor-destaque2);
+}
+
+/* ---------- Cabeçalho ---------- */
+header {
+  background: linear-gradient(160deg, #0c1024 60%, #1a2550 100%);
+  border-bottom: 2px solid var(--cor-destaque);
+  padding: 2rem 1.5rem 1.5rem;
+  text-align: center;
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+header h1 {
+  font-family: var(--fonte-display);
+  font-size: clamp(1.6rem, 5vw, 2.6rem);
+  font-weight: 700;
+  color: var(--cor-texto);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+header h1 span {
+  color: var(--cor-destaque);
+}
+
+header p.subtitulo {
+  font-family: var(--fonte-display);
+  font-size: 0.95rem;
+  color: var(--cor-destaque2);
+  margin: 0.25rem 0 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ---------- Navegação ---------- */
+nav {
+  background-color: var(--cor-primaria);
+  border-bottom: 1px solid var(--cor-borda);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0.85rem 1.4rem;
+  font-family: var(--fonte-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s, border-bottom-color 0.2s, background-color 0.2s;
+}
+
+ nav ul li a:hover,
+nav ul li a:focus {
+  color: var(--cor-destaque);
+  border-bottom-color: var(--cor-destaque);
+  background-color: rgba(201, 168, 76, 0.07);
+  text-decoration: none;
+} 
+
+/* ---------- Main ---------- */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------- Seções Gerais ---------- */
+section {
+  width: 100%;
+  max-width: var(--max-largura);
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 2rem;
+}
+
+section h2 {
+  font-family: var(--fonte-display);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--cor-destaque);
+  border-left: 4px solid var(--cor-destaque);
+  padding-left: 0.75rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+section h3 {
+  font-family: var(--fonte-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--cor-destaque2);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+section p {
+  color: var(--cor-texto);
+  margin-bottom: 1rem;
+}
+
+/* ---------- Linha divisória entre seções ---------- */
+.divisor {
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--cor-borda);
+  margin: 0;
+}
+
+/* ---------- Seção 1: Biografia ---------- */
+#biografia {
+  background-color: var(--cor-fundo);
+}
+
+.bio-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.bio-foto {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  border-radius: var(--raio);
+  border: 2px solid var(--cor-borda);
+  box-shadow: var(--sombra);
+  object-fit: cover;
+}
+
+.bio-foto-legenda {
+  font-size: 0.8rem;
+  color: var(--cor-texto-suave);
+  text-align: center;
+  margin-top: 0.4rem;
+  font-style: italic;
+}
+
+.destaque-box {
+  background: linear-gradient(135deg, #0c1230, #162040);
+  border-left: 4px solid var(--cor-destaque);
+  border-radius: var(--raio);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--cor-texto);
+  font-size: 1.05rem;
+  box-shadow: var(--sombra);
+}
+
+.destaque-box cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--cor-destaque2);
+  font-style: normal;
+  font-family: var(--fonte-display);
+}
+
+.imagem-bloco {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.imagem-bloco img {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: var(--raio);
+  border: 2px solid var(--cor-borda);
+  box-shadow: var(--sombra);
+}
+
+.imagem-bloco figcaption {
+  font-size: 0.82rem;
+  color: var(--cor-texto-suave);
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.linha-tempo {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  border-left: 2px solid var(--cor-borda);
+  border-right: 2px solid var(--cor-borda);
+}
+
+.linha-tempo li {
+  padding: 0.4rem 0 0.4rem 1.5rem;
+  position: relative;
+  color: var(--cor-texto);
+}
+
+.linha-tempo li strong {
+  color: var(--cor-destaque);
+  font-family: var(--fonte-display);
+  margin-right: 0.5rem;
+}
+
+/* ---------- Seção 2: Galeria ---------- */
+#galeria {
+  background-color: var(--cor-fundo-sec);
+}
+
+.galeria-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.galeria-item {
+  flex: 1 1 200px;
+  max-width: 420px;
+  background-color: var(--cor-primaria);
+  border-radius: var(--raio);
+  overflow: hidden;
+  border: 1px solid var(--cor-borda);
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+}
+
+.galeria-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.galeria-item:hover img,
+.galeria-item:focus-within img {
+  transform: scale(1.04);
+}
+
+.galeria-legenda {
+  padding: 0.6rem 0.85rem 0.85rem;
+  font-size: 0.82rem;
+  color: var(--cor-texto-suave);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* ---------- Referências ---------- */
+.referencias {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--cor-borda);
+}
+
+.referencias h3 {
+  color: var(--cor-destaque);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.referencias ol {
+  padding-left: 1.4rem;
+  color: var(--cor-texto-suave);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.referencias ol a {
+  word-break: break-all;
+}
+
+/* ---------- Link para o topo ---------- */
+.topo-link {
+  display: inline-block;
+  margin-top: 2.5rem;
+  padding: 0.5rem 1.2rem;
+  background-color: var(--cor-primaria);
+  border: 1px solid var(--cor-destaque);
+  border-radius: 4px;
+  font-family: var(--fonte-display);
+  font-size: 0.85rem;
+  color: var(--cor-destaque);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.topo-link:hover,
+.topo-link:focus {
+  background-color: var(--cor-destaque);
+  color: var(--cor-fundo);
+  text-decoration: none;
+}
+
+/* ---------- Rodapé ---------- */
+footer {
+  background: linear-gradient(160deg, #0c1024, #05070f);
+  border-top: 2px solid var(--cor-destaque);
+  text-align: center;
+  padding: 2rem 1.5rem;
+  font-family: var(--fonte-display);
+  font-size: 0.9rem;
+  color: var(--cor-texto-suave);
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
+
+footer strong {
+  color: var(--cor-destaque);
+}
+
+footer .footer-disciplina {
+  font-size: 0.8rem;
+  color: #5a6080;
+  margin-top: 0.8rem;
+}
+
+/* ---------- Responsividade ---------- */
+
+/* Tablet e acima: foto da bio ao lado do texto */
+@media (min-width: 640px) {
+  .bio-intro {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .bio-intro-texto {
+    flex: 1;
+  }
+
+  .bio-foto-wrapper {
+    flex-shrink: 0;
+    width: 200px;
+    text-align: center;
+  }
+
+  .bio-foto {
+    max-width: 200px;
+    margin: 0;
+  }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  header {
+    padding: 2.5rem 2rem 2rem;
+  }
+
+  .header-logo {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav ul li a {
+    padding: 1rem 1.8rem;
+  }
+
+  section {
+    padding: 4rem 2rem 2.5rem;
+  }
+
+  .galeria-item {
+    flex: 1 1 260px;
+  }
+}
+
+/* Tela grande */
+@media (min-width: 1280px) {
+  :root {
+    --max-largura: 980px;
+  }
+}
