@@ -1,24 +1,39 @@
+/* ==========================================================
+   style.css — Margaret Hamilton
+   Trabalho 3: CSS Grid + Responsividade
+   ========================================================== */
 
+/* ---------- Google Fonts ---------- */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
 
 /* ---------- Variáveis ---------- */
 :root {
-  --cor-fundo: #05070f;
-  --cor-fundo-sec: #0c1024;
-  --cor-primaria: #1a2550;
-  --cor-destaque: #c9a84c;
-  --cor-destaque2: #7ec8e3;
-  --cor-texto: #e8eaf0;
-  --cor-texto-suave: #9ba3c0;
-  --cor-borda: #1e2d6b;
+  /* Cores */
+  --cor-fundo:        #05070f;
+  --cor-fundo-sec:    #0c1024;
+  --cor-primaria:     #1a2550;
+  --cor-destaque:     #c9a84c;
+  --cor-destaque2:    #7ec8e3;
+  --cor-texto:        #e8eaf0;
+  --cor-texto-suave:  #9ba3c0;
+  --cor-borda:        #1e2d6b;
+  --cor-input-bg:     #0d1530;
+  --cor-input-borda:  #2a3a7a;
+  --cor-erro:         #e05c5c;
+
+  /* Tipografia */
   --fonte-display: 'Space Grotesk', sans-serif;
-  --fonte-corpo: 'Lora', serif;
+  --fonte-corpo:   'Lora', serif;
+
+  /* Layout */
   --max-largura: 900px;
-  --raio: 8px;
-  --sombra: 0 4px 32px rgba(0, 0, 0, 0.5);
+  --raio:        8px;
+  --sombra:      0 4px 32px rgba(0, 0, 0, 0.5);
 }
 
-/* ---------- Base ---------- */
+/* ==========================================================
+   BASE
+   ========================================================== */
 html {
   scroll-behavior: smooth;
   background-color: var(--cor-fundo);
@@ -32,6 +47,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin: 0;
 }
 
 img {
@@ -51,7 +67,9 @@ a:focus {
   color: var(--cor-destaque2);
 }
 
-/* ---------- Cabeçalho ---------- */
+/* ==========================================================
+   CABEÇALHO
+   ========================================================== */
 header {
   background: linear-gradient(160deg, #0c1024 60%, #1a2550 100%);
   border-bottom: 2px solid var(--cor-destaque);
@@ -88,7 +106,9 @@ header p.subtitulo {
   text-transform: uppercase;
 }
 
-/* ---------- Navegação ---------- */
+/* ==========================================================
+   NAVEGAÇÃO
+   ========================================================== */
 nav {
   background-color: var(--cor-primaria);
   border-bottom: 1px solid var(--cor-borda);
@@ -121,15 +141,17 @@ nav ul li a {
   transition: color 0.2s, border-bottom-color 0.2s, background-color 0.2s;
 }
 
- nav ul li a:hover,
+nav ul li a:hover,
 nav ul li a:focus {
   color: var(--cor-destaque);
   border-bottom-color: var(--cor-destaque);
   background-color: rgba(201, 168, 76, 0.07);
   text-decoration: none;
-} 
+}
 
-/* ---------- Main ---------- */
+/* ==========================================================
+   MAIN
+   ========================================================== */
 main {
   flex: 1;
   display: flex;
@@ -137,7 +159,9 @@ main {
   align-items: center;
 }
 
-/* ---------- Seções Gerais ---------- */
+/* ==========================================================
+   SEÇÕES — BASE COMUM
+   ========================================================== */
 section {
   width: 100%;
   max-width: var(--max-largura);
@@ -170,7 +194,7 @@ section p {
   margin-bottom: 1rem;
 }
 
-/* ---------- Linha divisória entre seções ---------- */
+/* ---------- Divisor ---------- */
 .divisor {
   width: 100%;
   border: none;
@@ -178,7 +202,9 @@ section p {
   margin: 0;
 }
 
-/* ---------- Seção 1: Biografia ---------- */
+/* ==========================================================
+   SEÇÃO 1: BIOGRAFIA
+   ========================================================== */
 #biografia {
   background-color: var(--cor-fundo);
 }
@@ -270,7 +296,9 @@ section p {
   margin-right: 0.5rem;
 }
 
-/* ---------- Seção 2: Galeria ---------- */
+/* ==========================================================
+   SEÇÃO 2: GALERIA
+   ========================================================== */
 #galeria {
   background-color: var(--cor-fundo-sec);
 }
@@ -340,7 +368,285 @@ section p {
   word-break: break-all;
 }
 
-/* ---------- Link para o topo ---------- */
+/* ==========================================================
+   SEÇÃO 3: MISSÃO APOLLO — FORMULÁRIO
+   ========================================================== */
+#missao {
+  background-color: var(--cor-fundo);
+}
+
+/* Grid: figura | formulário */
+.missao-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.missao-figura {
+  margin: 0;
+}
+
+.missao-figura img {
+  width: 100%;
+  height: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: var(--raio);
+  border: 2px solid var(--cor-borda);
+  box-shadow: var(--sombra);
+}
+
+.missao-figura figcaption {
+  font-size: 0.82rem;
+  color: var(--cor-texto-suave);
+  margin-top: 0.5rem;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Formulário */
+.missao-form fieldset {
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+  background-color: var(--cor-fundo-sec);
+}
+
+.missao-form legend {
+  font-family: var(--fonte-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cor-destaque);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0 0.5rem;
+}
+
+/* Grid interno do formulário */
+.missao-form fieldset {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.missao-form legend {
+  grid-column: 1 / -1;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-grupo label {
+  font-family: var(--fonte-display);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--cor-texto-suave);
+  letter-spacing: 0.02em;
+}
+
+.form-grupo input[type="text"],
+.form-grupo input[type="email"],
+.form-grupo input[type="date"],
+.form-grupo select,
+.form-grupo textarea {
+  background-color: var(--cor-input-bg);
+  border: 1px solid var(--cor-input-borda);
+  border-radius: 4px;
+  color: var(--cor-texto);
+  font-family: var(--fonte-corpo);
+  font-size: 0.95rem;
+  padding: 0.55rem 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.form-grupo input[type="text"]:focus,
+.form-grupo input[type="email"]:focus,
+.form-grupo input[type="date"]:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+  border-color: var(--cor-destaque);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.2);
+  outline: none;
+}
+
+.form-grupo select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239ba3c0' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.25rem;
+}
+
+.form-grupo select option {
+  background-color: var(--cor-fundo-sec);
+  color: var(--cor-texto);
+}
+
+.form-grupo input[type="range"] {
+  width: 100%;
+  accent-color: var(--cor-destaque);
+  cursor: pointer;
+}
+
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--cor-texto-suave);
+  font-family: var(--fonte-display);
+  margin-top: -0.25rem;
+}
+
+.form-grupo textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Checkbox */
+.form-grupo--check {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.form-grupo--check input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--cor-destaque);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.form-grupo--check label {
+  font-size: 0.88rem;
+  color: var(--cor-texto-suave);
+  cursor: pointer;
+}
+
+/* Botão */
+.btn-enviar {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.7rem 2rem;
+  background-color: var(--cor-destaque);
+  color: var(--cor-fundo);
+  border: none;
+  border-radius: 4px;
+  font-family: var(--fonte-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-enviar:hover,
+.btn-enviar:focus {
+  background-color: var(--cor-destaque2);
+  outline: none;
+}
+
+.btn-enviar:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================================
+   SEÇÃO 4: LEGADO — PAINEL DE FOTOS
+   ========================================================== */
+#legado {
+  background-color: var(--cor-fundo-sec);
+  /* Largura máxima expandida para o painel */
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#legado > h2,
+#legado > p,
+#legado > .topo-link,
+#legado > .painel-creditos {
+  max-width: var(--max-largura);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+#legado > h2 {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* Painel de fotos: grid com proporções diferentes */
+.painel-fotos {
+  display: grid;
+  width: 100%;
+  max-width: min(1400px, 100%);
+  margin: 1.5rem auto;
+  gap: 6px;
+
+  /*
+    Layout mobile: coluna única
+    Layout desktop: grade assimétrica de 3 colunas × 2 linhas
+    Áreas:
+      a b b
+      c d e
+  */
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d"
+    "e";
+}
+
+.painel-item {
+  overflow: hidden;
+  background-color: var(--cor-primaria);
+}
+
+.painel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.painel-item:hover img,
+.painel-item:focus-within img {
+  transform: scale(1.04);
+}
+
+/* Alturas fixas no mobile para evitar imagens muito altas */
+.painel-item--a { grid-area: a; height: 260px; }
+.painel-item--b { grid-area: b; height: 320px; }
+.painel-item--c { grid-area: c; height: 240px; }
+.painel-item--d { grid-area: d; height: 300px; }
+.painel-item--e { grid-area: e; height: 220px; }
+
+.painel-creditos {
+  font-size: 0.8rem;
+  color: var(--cor-texto-suave);
+  font-style: italic;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* ==========================================================
+   LINK PARA O TOPO
+   ========================================================== */
 .topo-link {
   display: inline-block;
   margin-top: 2.5rem;
@@ -364,7 +670,9 @@ section p {
   text-decoration: none;
 }
 
-/* ---------- Rodapé ---------- */
+/* ==========================================================
+   RODAPÉ
+   ========================================================== */
 footer {
   background: linear-gradient(160deg, #0c1024, #05070f);
   border-top: 2px solid var(--cor-destaque);
@@ -389,9 +697,11 @@ footer .footer-disciplina {
   margin-top: 0.8rem;
 }
 
-/* ---------- Responsividade ---------- */
+/* ==========================================================
+   RESPONSIVIDADE
+   ========================================================== */
 
-/* Tablet e acima: foto da bio ao lado do texto */
+/* Tablet: foto da bio ao lado do texto */
 @media (min-width: 640px) {
   .bio-intro {
     flex-direction: row;
@@ -412,9 +722,36 @@ footer .footer-disciplina {
     max-width: 200px;
     margin: 0;
   }
+
+  /* Formulário: 2 colunas nos fieldsets */
+  .missao-form fieldset:first-of-type {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .missao-form fieldset:first-of-type legend {
+    grid-column: 1 / -1;
+  }
+
+  /* Painel mobile-médio: 2 colunas */
+  .painel-fotos {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e e";
+    grid-template-rows: 260px 260px 220px;
+  }
+
+  .painel-item--a,
+  .painel-item--b,
+  .painel-item--c,
+  .painel-item--d,
+  .painel-item--e {
+    height: auto;
+  }
 }
 
-/* Desktop */
+/* Desktop: layout lado a lado no formulário e painel grande */
 @media (min-width: 900px) {
   header {
     padding: 2.5rem 2rem 2rem;
@@ -436,11 +773,46 @@ footer .footer-disciplina {
   .galeria-item {
     flex: 1 1 260px;
   }
+
+  /* Formulário: figura ao lado */
+  .missao-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  /* Painel grande: 3 colunas, áreas assimétricas */
+  .painel-fotos {
+    max-width: min(1400px, 95vw);
+    grid-template-columns: 1.2fr 1.8fr 1fr;
+    grid-template-rows: 320px 280px;
+    grid-template-areas:
+      "a b c"
+      "d b e";
+  }
 }
 
 /* Tela grande */
 @media (min-width: 1280px) {
   :root {
     --max-largura: 980px;
+  }
+
+  .painel-fotos {
+    grid-template-rows: 360px 300px;
+  }
+}
+
+/* Acessibilidade: reduz movimento */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .galeria-item img,
+  .painel-item img,
+  .btn-enviar,
+  .topo-link,
+  nav ul li a {
+    transition: none;
   }
 }

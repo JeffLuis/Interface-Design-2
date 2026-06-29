@@ -4,7 +4,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO geral -->
   <title>Margaret Hamilton — A Programadora que foi à Lua</title>
+  <meta name="description"
+    content="Conheça a trajetória de Margaret Hamilton, pioneira da engenharia de software que liderou o desenvolvimento do código que levou o homem à Lua na missão Apollo 11.">
+  <meta name="keywords"
+    content="Margaret Hamilton, Apollo 11, engenharia de software, NASA, MIT, missão lunar, programação, história da computação">
+  <meta name="author" content="Jefferson Luis">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Margaret Hamilton — A Programadora que foi à Lua">
+  <meta property="og:description"
+    content="Conheça a trajetória de Margaret Hamilton, pioneira da engenharia de software que liderou o desenvolvimento do código que levou o homem à Lua.">
+  <meta property="og:image" content="img/Margaret_Hamilton_-_restoration.jpg">
+  <meta property="og:image:alt" content="Margaret Hamilton no MIT, c. 1969">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Margaret Hamilton — A Programadora que foi à Lua">
+  <meta name="twitter:description"
+    content="A matemática e cientista da computação que cunhou o termo 'engenharia de software' e salvou a Apollo 11.">
+  <meta name="twitter:image" content="img/Margaret_Hamilton_-_restoration.jpg">
 
   <link rel="stylesheet" href="css/modern-normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -251,6 +275,149 @@
       <a class="topo-link" href="#topo">&#8593; Voltar ao topo</a>
     </section>
 
+    <hr class="divisor">
+
+    <!-- === SEÇÃO 3: MISSÃO APOLLO (FORMULÁRIO) === -->
+    <section id="missao" aria-labelledby="titulo-missao">
+      <h2 id="titulo-missao">Missão Apollo</h2>
+      <p>
+        O programa Apollo foi uma das maiores façanhas científicas e
+        tecnológicas da história da humanidade. Quer saber mais ou tem algo a
+        compartilhar? Preencha o formulário abaixo.
+      </p>
+
+      <div class="missao-grid">
+
+        <figure class="missao-figura">
+          <img src="img/Apollo_11_Launch_-_GPN-2000-000630.jpg"
+            alt="Lançamento do foguete Saturn V da missão Apollo 11, em julho de 1969"
+            loading="lazy">
+          <figcaption>
+            Lançamento da Apollo 11, julho de 1969.<br>
+            Foto: NASA / Domínio público.
+          </figcaption>
+        </figure>
+
+        <div class="missao-form-wrapper">
+          <form class="missao-form" action="#" method="post" novalidate>
+
+            <fieldset>
+              <legend>Dados pessoais</legend>
+
+              <div class="form-grupo">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="name" required>
+              </div>
+
+              <div class="form-grupo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" required>
+              </div>
+
+              <div class="form-grupo">
+                <label for="nascimento">Data de nascimento</label>
+                <input type="date" id="nascimento" name="nascimento" autocomplete="bday">
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Seu interesse</legend>
+
+              <div class="form-grupo">
+                <label for="interesse">Área de interesse</label>
+                <select id="interesse" name="interesse" required>
+                  <option value="" disabled selected>Selecione uma área</option>
+                  <option value="software">Engenharia de Software</option>
+                  <option value="espacial">Exploração Espacial</option>
+                  <option value="historia">História da Ciência</option>
+                  <option value="educacao">Educação em STEM</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+
+              <div class="form-grupo">
+                <label for="nivel">Nível de conhecimento sobre o tema</label>
+                <input type="range" id="nivel" name="nivel" min="1" max="5" value="3">
+                <div class="range-labels" aria-hidden="true">
+                  <span>Iniciante</span>
+                  <span>Especialista</span>
+                </div>
+              </div>
+
+              <div class="form-grupo">
+                <label for="mensagem">Mensagem ou pergunta</label>
+                <textarea id="mensagem" name="mensagem" rows="4"
+                  placeholder="Escreva aqui sua mensagem..."></textarea>
+              </div>
+
+              <div class="form-grupo form-grupo--check">
+                <input type="checkbox" id="newsletter" name="newsletter" value="sim">
+                <label for="newsletter">Desejo receber novidades sobre história da computação</label>
+              </div>
+            </fieldset>
+
+            <button class="btn-enviar" type="submit">Enviar mensagem</button>
+
+          </form>
+        </div>
+
+      </div>
+
+      <a class="topo-link" href="#topo">&#8593; Voltar ao topo</a>
+    </section>
+
+    <hr class="divisor">
+
+    <!-- === SEÇÃO 4: LEGADO (PAINEL DE FOTOS) === -->
+    <section id="legado" aria-labelledby="titulo-legado">
+      <h2 id="titulo-legado">Legado</h2>
+      <p>
+        O impacto do programa Apollo vai muito além da corrida espacial. As
+        imagens abaixo retratam momentos históricos da missão que tornaram
+        possível a maior conquista tecnológica do século XX.
+      </p>
+
+      <div class="painel-fotos" role="list" aria-label="Painel de imagens históricas da missão Apollo">
+
+        <div class="painel-item painel-item--a" role="listitem">
+          <img src="img/Apollo_11_Crew.jpg"
+            alt="Tripulação da Apollo 11: Neil Armstrong, Michael Collins e Buzz Aldrin, em trajes espaciais"
+            loading="lazy">
+        </div>
+
+        <div class="painel-item painel-item--b" role="listitem">
+          <img src="img/si_projetoapollo8_1.jpg"
+            alt="Astronautas do projeto Apollo posando na frente do simulador de treinamento"
+            loading="lazy">
+        </div>
+
+        <div class="painel-item painel-item--c" role="listitem">
+          <img src="img/Armstrong_on_Moon.jpg"
+            alt="Neil Armstrong descendo a escada do módulo lunar Eagle na superfície da Lua"
+            loading="lazy">
+        </div>
+
+        <div class="painel-item painel-item--d" role="listitem">
+          <img src="img/20190719_Apollo-11.jpg"
+            alt="Astronauta Buzz Aldrin caminhando na superfície lunar com o módulo Eagle e a bandeira americana ao fundo"
+            loading="lazy">
+        </div>
+
+        <div class="painel-item painel-item--e" role="listitem">
+          <img src="img/146328.jpg"
+            alt="Módulo lunar e rover lunar na superfície da Lua durante uma missão Apollo"
+            loading="lazy">
+        </div>
+
+      </div>
+
+      <p class="painel-creditos">
+        Fotos: NASA / Domínio público. Imagens históricas das missões Apollo, 1968–1972.
+      </p>
+
+      <a class="topo-link" href="#topo">&#8593; Voltar ao topo</a>
+    </section>
+
   </main>
 
   <!-- ===== RODAPÉ ===== -->
@@ -264,7 +431,7 @@
       na seção Galeria.
     </p>
     <p class="footer-disciplina">
-      Trabalho 2 — CSS responsivo sem frameworks externos &bull; 2025
+      Trabalho 3 — CSS Grid e Responsividade &bull; 2025
     </p>
   </footer>
 
