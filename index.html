@@ -95,7 +95,7 @@
         <div class="bio-foto-wrapper">
           <!-- LCP: sem lazy loading, com fetchpriority high e dimensões explícitas -->
           <img class="bio-foto"
-            src="img/Margaret_Hamilton_-_restoration.jpg"
+            src="img/Margaret_Hamilton.WebP"
             alt="Fotografia em preto e branco de Margaret Hamilton no MIT, anos 1960"
             width="360" height="480"
             fetchpriority="high">
@@ -209,7 +209,7 @@
       <div class="galeria-grid">
 
         <div class="galeria-item">
-          <img src="img/Margaret_Hamilton_-_restoration.jpg"
+          <img src="img/Margaret_Hamilton.WebP"
             alt="Margaret Hamilton ao lado de uma pilha de listagens do código-fonte impresso do software Apollo"
             width="420" height="315"
             loading="lazy">
@@ -221,7 +221,7 @@
         </div>
 
         <div class="galeria-item">
-          <img src="img/Apollo_11_Launch_-_GPN-2000-000630.jpg"
+          <img src="img/Apollo_11_Launch.WebP"
             alt="Astronauta Buzz Aldrin caminhando na superfície lunar durante a Apollo 11, com o módulo de descida ao fundo"
             width="420" height="315"
             loading="lazy">
@@ -233,7 +233,7 @@
         </div>
 
         <div class="galeria-item">
-          <img src="img/Apolo_Guidence_Computer_CHM.agr.jpg"
+          <img src="img/Apolo_Guidence_Computer_CHM.agr.WebP"
             alt="Apollo Guidance Computer exposto no Computer History Museum, mostrando a interface física usada nas missões Apollo"
             width="420" height="315"
             loading="lazy">
@@ -245,7 +245,7 @@
         </div>
 
         <div class="galeria-item">
-          <img src="img/Hamilton_Final.jpg"
+          <img src="img/Hamilton_Final.WebP"
             alt="Presidente Barack Obama entregando a Medalha Presidencial da Liberdade a Margaret Hamilton na Casa Branca em 2016"
             width="420" height="315"
             loading="lazy">
@@ -325,21 +325,21 @@
                 <label for="nome">Nome completo</label>
                 <input type="text" id="nome" name="nome"
                   placeholder="Seu nome" autocomplete="name"
-                  aria-label="Nome completo" required>
+                  aria-label="Nome completo" title="Nome completo" required>
               </div>
 
               <div class="form-grupo">
                 <label for="email">E-mail</label>
                 <input type="email" id="email" name="email"
                   placeholder="seu@email.com" autocomplete="email"
-                  aria-label="Endereço de e-mail" required>
+                  aria-label="Endereço de e-mail" title="Endereço de e-mail" required>
               </div>
 
               <div class="form-grupo">
                 <label for="nascimento">Data de nascimento</label>
                 <input type="date" id="nascimento" name="nascimento"
                   autocomplete="bday"
-                  aria-label="Data de nascimento">
+                  aria-label="Data de nascimento" title="Data de nascimento">
               </div>
             </fieldset>
 
@@ -349,7 +349,7 @@
               <div class="form-grupo">
                 <label for="interesse">Área de interesse</label>
                 <select id="interesse" name="interesse"
-                  aria-label="Área de interesse" required>
+                  aria-label="Área de interesse" title="Área de interesse" required>
                   <option value="" disabled selected>Selecione uma área</option>
                   <option value="software">Engenharia de Software</option>
                   <option value="espacial">Exploração Espacial</option>
@@ -363,7 +363,8 @@
                 <label for="nivel">Nível de conhecimento sobre o tema</label>
                 <input type="range" id="nivel" name="nivel"
                   min="1" max="5" value="3"
-                  aria-label="Nível de conhecimento de 1 (iniciante) a 5 (especialista)">
+                  aria-label="Nível de conhecimento de 1 (iniciante) a 5 (especialista)"
+                  title="Nível de conhecimento">
                 <div class="range-labels" aria-hidden="true">
                   <span>Iniciante</span>
                   <span>Especialista</span>
@@ -374,13 +375,14 @@
                 <label for="mensagem">Mensagem ou pergunta</label>
                 <textarea id="mensagem" name="mensagem" rows="4"
                   placeholder="Escreva aqui sua mensagem..."
-                  aria-label="Mensagem ou pergunta"></textarea>
+                  aria-label="Mensagem ou pergunta" title="Mensagem ou pergunta"></textarea>
               </div>
 
               <div class="form-grupo form-grupo--check">
                 <input type="checkbox" id="newsletter" name="newsletter"
                   value="sim"
-                  aria-label="Desejo receber novidades sobre história da computação">
+                  aria-label="Desejo receber novidades sobre história da computação"
+                  title="Receber novidades sobre história da computação">
                 <label for="newsletter">Desejo receber novidades sobre história da computação</label>
               </div>
             </fieldset>
@@ -409,35 +411,35 @@
       <div class="painel-fotos" role="list" aria-label="Painel de imagens históricas da missão Apollo">
 
         <div class="painel-item painel-item--a" role="listitem">
-          <img src="img/Apollo_11_Crew.jpg"
+          <img src="img/Apollo_11_Crew.WebP"
             alt="Tripulação da Apollo 11: Neil Armstrong, Michael Collins e Buzz Aldrin, em trajes espaciais"
             width="400" height="400"
             loading="lazy">
         </div>
 
         <div class="painel-item painel-item--b" role="listitem">
-          <img src="img/si_projetoapollo8_1.jpg"
+          <img src="img/si_projetoapollo8_1.WebP"
             alt="Astronautas do projeto Apollo posando na frente do simulador de treinamento"
             width="400" height="600"
             loading="lazy">
         </div>
 
         <div class="painel-item painel-item--c" role="listitem">
-          <img src="img/Armstrong_on_Moon.jpg"
+          <img src="img/Armstrong_on_Moon.WebP"
             alt="Neil Armstrong descendo a escada do módulo lunar Eagle na superfície da Lua"
             width="400" height="400"
             loading="lazy">
         </div>
 
         <div class="painel-item painel-item--d" role="listitem">
-          <img src="img/20190719_Apollo-11.jpg"
+          <img src="img/Apollo-11.WebP"
             alt="Astronauta Buzz Aldrin caminhando na superfície lunar com o módulo Eagle e a bandeira americana ao fundo"
             width="400" height="450"
             loading="lazy">
         </div>
 
         <div class="painel-item painel-item--e" role="listitem">
-          <img src="img/146328.jpg"
+          <img src="img/apolo.WebP"
             alt="Módulo lunar e rover lunar na superfície da Lua durante uma missão Apollo"
             width="700" height="400"
             loading="lazy">
