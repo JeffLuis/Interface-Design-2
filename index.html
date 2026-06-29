@@ -7,18 +7,19 @@
 
   <!-- SEO geral -->
   <title>Margaret Hamilton — A Programadora que foi à Lua</title>
+  <!-- Meta description encurtada para caber em ~920px (~150 chars) -->
   <meta name="description"
-    content="Conheça a trajetória de Margaret Hamilton, pioneira da engenharia de software que liderou o desenvolvimento do código que levou o homem à Lua na missão Apollo 11.">
+    content="Margaret Hamilton: pioneira da engenharia de software que liderou o código que levou o homem à Lua na missão Apollo 11.">
   <meta name="keywords"
     content="Margaret Hamilton, Apollo 11, engenharia de software, NASA, MIT, missão lunar, programação, história da computação">
   <meta name="author" content="Jefferson Luis">
   <meta name="robots" content="index, follow">
 
-  <!-- Open Graph (Facebook, LinkedIn, WhatsApp etc.) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Margaret Hamilton — A Programadora que foi à Lua">
   <meta property="og:description"
-    content="Conheça a trajetória de Margaret Hamilton, pioneira da engenharia de software que liderou o desenvolvimento do código que levou o homem à Lua.">
+    content="Pioneira da engenharia de software que cunhou o termo e salvou a Apollo 11.">
   <meta property="og:image" content="img/Margaret_Hamilton_-_restoration.jpg">
   <meta property="og:image:alt" content="Margaret Hamilton no MIT, c. 1969">
   <meta property="og:locale" content="pt_BR">
@@ -27,14 +28,20 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Margaret Hamilton — A Programadora que foi à Lua">
   <meta name="twitter:description"
-    content="A matemática e cientista da computação que cunhou o termo 'engenharia de software' e salvou a Apollo 11.">
+    content="A matemática que cunhou o termo engenharia de software e salvou a Apollo 11.">
   <meta name="twitter:image" content="img/Margaret_Hamilton_-_restoration.jpg">
+
+  <!-- Preload da imagem LCP (acima da dobra, carrega primeiro) -->
+  <link rel="preload" as="image" href="img/Margaret_Hamilton_-_restoration.jpg">
 
   <link rel="stylesheet" href="css/modern-normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
+  <!-- Skip navigation para acessibilidade -->
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
 
   <!-- ===== CABEÇALHO ===== -->
   <header id="topo">
@@ -57,7 +64,7 @@
   </nav>
 
   <!-- ===== CONTEÚDO PRINCIPAL ===== -->
-  <main>
+  <main id="conteudo-principal">
 
     <!-- === SEÇÃO 1: BIOGRAFIA === -->
     <section id="biografia" aria-labelledby="titulo-biografia">
@@ -86,8 +93,12 @@
         </div>
 
         <div class="bio-foto-wrapper">
-          <img class="bio-foto" src="img/Margaret_Hamilton_-_restoration.jpg"
-            alt="Fotografia em preto e branco de Margaret Hamilton no MIT, anos 1960">
+          <!-- LCP: sem lazy loading, com fetchpriority high e dimensões explícitas -->
+          <img class="bio-foto"
+            src="img/Margaret_Hamilton_-_restoration.jpg"
+            alt="Fotografia em preto e branco de Margaret Hamilton no MIT, anos 1960"
+            width="360" height="480"
+            fetchpriority="high">
           <p class="bio-foto-legenda">
             Margaret Hamilton no MIT, c.&nbsp;1969.<br>
             Fonte: NASA / Domínio público
@@ -136,7 +147,9 @@
 
       <figure class="imagem-bloco">
         <img src="img/Margaret_Hamilton_in_action.jpg"
-          alt="Margaret Hamilton em seu laboratório no MIT, rodeada de equipamentos da época">
+          alt="Margaret Hamilton em seu laboratório no MIT, rodeada de equipamentos da época"
+          width="600" height="450"
+          loading="lazy">
         <figcaption>
           Hamilton em seu laboratório no MIT durante o desenvolvimento do
           software Apollo. Fonte: NASA / Domínio público.
@@ -175,8 +188,7 @@
         <li><strong>1969</strong> Apollo 11 pousa na Lua; seu software previne um aborto de missão.</li>
         <li><strong>1976</strong> Co-funda a empresa Higher Order Software (HOS).</li>
         <li><strong>1986</strong> Funda a Hamilton Technologies, Inc.</li>
-        <li><strong>2003</strong> Recebe a NASA Exceptional Space Act Award, com o maior prêmio em dinheiro da história
-          da NASA.</li>
+        <li><strong>2003</strong> Recebe a NASA Exceptional Space Act Award, com o maior prêmio em dinheiro da história da NASA.</li>
         <li><strong>2016</strong> Recebe a Medalha Presidencial da Liberdade, a mais alta honraria civil dos EUA.</li>
       </ul>
 
@@ -198,7 +210,8 @@
 
         <div class="galeria-item">
           <img src="img/Margaret_Hamilton_-_restoration.jpg"
-            alt="Margaret Hamilton ao lado de uma enorme pilha de listagens de código-fonte impresso do software Apollo"
+            alt="Margaret Hamilton ao lado de uma pilha de listagens do código-fonte impresso do software Apollo"
+            width="420" height="315"
             loading="lazy">
           <p class="galeria-legenda">
             Hamilton ao lado dos códigos-fonte impressos do software Apollo —
@@ -210,6 +223,7 @@
         <div class="galeria-item">
           <img src="img/Apollo_11_Launch_-_GPN-2000-000630.jpg"
             alt="Astronauta Buzz Aldrin caminhando na superfície lunar durante a Apollo 11, com o módulo de descida ao fundo"
+            width="420" height="315"
             loading="lazy">
           <p class="galeria-legenda">
             Buzz Aldrin na superfície da Lua, Apollo 11, julho de 1969. O
@@ -220,7 +234,8 @@
 
         <div class="galeria-item">
           <img src="img/Apolo_Guidence_Computer_CHM.agr.jpg"
-            alt="Apollo Guidance Computer exposto no Computer History Museum, mostrando a interface física do computador usado nas missões Apollo"
+            alt="Apollo Guidance Computer exposto no Computer History Museum, mostrando a interface física usada nas missões Apollo"
+            width="420" height="315"
             loading="lazy">
           <p class="galeria-legenda">
             Apollo Guidance Computer (AGC), o computador programado pela
@@ -232,6 +247,7 @@
         <div class="galeria-item">
           <img src="img/Hamilton_Final.jpg"
             alt="Presidente Barack Obama entregando a Medalha Presidencial da Liberdade a Margaret Hamilton na Casa Branca em 2016"
+            width="420" height="315"
             loading="lazy">
           <p class="galeria-legenda">
             O presidente Barack Obama confere a Hamilton a Medalha Presidencial
@@ -291,6 +307,7 @@
         <figure class="missao-figura">
           <img src="img/Apollo_11_Launch_-_GPN-2000-000630.jpg"
             alt="Lançamento do foguete Saturn V da missão Apollo 11, em julho de 1969"
+            width="600" height="800"
             loading="lazy">
           <figcaption>
             Lançamento da Apollo 11, julho de 1969.<br>
@@ -306,17 +323,23 @@
 
               <div class="form-grupo">
                 <label for="nome">Nome completo</label>
-                <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="name" required>
+                <input type="text" id="nome" name="nome"
+                  placeholder="Seu nome" autocomplete="name"
+                  aria-label="Nome completo" required>
               </div>
 
               <div class="form-grupo">
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" required>
+                <input type="email" id="email" name="email"
+                  placeholder="seu@email.com" autocomplete="email"
+                  aria-label="Endereço de e-mail" required>
               </div>
 
               <div class="form-grupo">
                 <label for="nascimento">Data de nascimento</label>
-                <input type="date" id="nascimento" name="nascimento" autocomplete="bday">
+                <input type="date" id="nascimento" name="nascimento"
+                  autocomplete="bday"
+                  aria-label="Data de nascimento">
               </div>
             </fieldset>
 
@@ -325,7 +348,8 @@
 
               <div class="form-grupo">
                 <label for="interesse">Área de interesse</label>
-                <select id="interesse" name="interesse" required>
+                <select id="interesse" name="interesse"
+                  aria-label="Área de interesse" required>
                   <option value="" disabled selected>Selecione uma área</option>
                   <option value="software">Engenharia de Software</option>
                   <option value="espacial">Exploração Espacial</option>
@@ -337,7 +361,9 @@
 
               <div class="form-grupo">
                 <label for="nivel">Nível de conhecimento sobre o tema</label>
-                <input type="range" id="nivel" name="nivel" min="1" max="5" value="3">
+                <input type="range" id="nivel" name="nivel"
+                  min="1" max="5" value="3"
+                  aria-label="Nível de conhecimento de 1 (iniciante) a 5 (especialista)">
                 <div class="range-labels" aria-hidden="true">
                   <span>Iniciante</span>
                   <span>Especialista</span>
@@ -347,11 +373,14 @@
               <div class="form-grupo">
                 <label for="mensagem">Mensagem ou pergunta</label>
                 <textarea id="mensagem" name="mensagem" rows="4"
-                  placeholder="Escreva aqui sua mensagem..."></textarea>
+                  placeholder="Escreva aqui sua mensagem..."
+                  aria-label="Mensagem ou pergunta"></textarea>
               </div>
 
               <div class="form-grupo form-grupo--check">
-                <input type="checkbox" id="newsletter" name="newsletter" value="sim">
+                <input type="checkbox" id="newsletter" name="newsletter"
+                  value="sim"
+                  aria-label="Desejo receber novidades sobre história da computação">
                 <label for="newsletter">Desejo receber novidades sobre história da computação</label>
               </div>
             </fieldset>
@@ -382,30 +411,35 @@
         <div class="painel-item painel-item--a" role="listitem">
           <img src="img/Apollo_11_Crew.jpg"
             alt="Tripulação da Apollo 11: Neil Armstrong, Michael Collins e Buzz Aldrin, em trajes espaciais"
+            width="400" height="400"
             loading="lazy">
         </div>
 
         <div class="painel-item painel-item--b" role="listitem">
           <img src="img/si_projetoapollo8_1.jpg"
             alt="Astronautas do projeto Apollo posando na frente do simulador de treinamento"
+            width="400" height="600"
             loading="lazy">
         </div>
 
         <div class="painel-item painel-item--c" role="listitem">
           <img src="img/Armstrong_on_Moon.jpg"
             alt="Neil Armstrong descendo a escada do módulo lunar Eagle na superfície da Lua"
+            width="400" height="400"
             loading="lazy">
         </div>
 
         <div class="painel-item painel-item--d" role="listitem">
           <img src="img/20190719_Apollo-11.jpg"
             alt="Astronauta Buzz Aldrin caminhando na superfície lunar com o módulo Eagle e a bandeira americana ao fundo"
+            width="400" height="450"
             loading="lazy">
         </div>
 
         <div class="painel-item painel-item--e" role="listitem">
           <img src="img/146328.jpg"
             alt="Módulo lunar e rover lunar na superfície da Lua durante uma missão Apollo"
+            width="700" height="400"
             loading="lazy">
         </div>
 

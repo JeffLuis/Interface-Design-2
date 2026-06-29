@@ -68,6 +68,29 @@ a:focus {
 }
 
 /* ==========================================================
+   SKIP NAVIGATION (acessibilidade)
+   ========================================================== */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background-color: var(--cor-destaque);
+  color: var(--cor-fundo);
+  font-family: var(--fonte-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 var(--raio) var(--raio);
+  text-decoration: none;
+  z-index: 200;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ==========================================================
    CABEÇALHO
    ========================================================== */
 header {
